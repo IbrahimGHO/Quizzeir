@@ -1,0 +1,85 @@
+.App {
+  text-align: center;
+  background-color: #1F2937;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.text{
+  padding: 5px;
+  margin: 5px;
+  color: #f2f2f2;
+}
+.App-link {
+  color: #61dafb;
+}
+.pads {
+  padding-top: 25px;
+  padding-left: 20px;
+}
+.no-file-chosen-message {
+  font-size: 14px;
+  color: #777;
+}
+.cardStyle{
+  background-color: #111827;
+  color :#f2f2f2;
+  padding: 20px; 
+  margin: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 15px;
+}
+.custom-file-input {
+  display: inline-block;
+  padding: 10px ;
+  padding-top: 30;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.file-label {
+  font-size: 15px;
+  margin-left: 10px;
+  color: #fff;
+
+}
+input[type="file"] {
+  display: none;
+}
+.file-input-container {
+  display: flex;
+  align-items: center;
+  background-color: #1F2937;
+
+  
+}
+.big-button{
+  width:60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+

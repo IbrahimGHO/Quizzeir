@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import mammoth from 'mammoth';
 import ChatGptComponent from './ChatGptComponent';
 import Nofile from './Component/Nofile';
-
+import  {UploadOutlined ,FileTextOutlined} from '@ant-design/icons';
 
 const DocumentReader = () => {
   const [documentText, setDocumentText] = useState('');
@@ -33,13 +33,13 @@ const DocumentReader = () => {
     <div className='file-input-container'>
 
       <input type="file" id="fileInput" onChange={handleFileChange} />
-      <label htmlFor="fileInput" className="custom-file-input">Choose File</label>
-      <span className="file-label">{fileName}</span>
+      <label htmlFor="fileInput" className="custom-file-input">Choose File <UploadOutlined /> </label>
+      <span className="file-label"><FileTextOutlined/> {fileName} </span>
       </div>
     </div>
     
       <div className='text' dangerouslySetInnerHTML={{ __html: documentText }} />
-      {!documentText && <Nofile />}
+      {!documentText && <Nofile/>}
       {documentText && <ChatGptComponent text={documentText} />}
     </div>
   );

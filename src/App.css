@@ -51,12 +51,12 @@
 }
 .custom-file-input {
   display: inline-block;
-  padding: 10px ;
-  padding-top: 30;
+  padding: 15px ;
+  padding-top: 15px;
   font-size: 16px;
   font-weight: bold;
   color: #fff;
-  background-color: #3498db;
+  background-color: var(--primary-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;

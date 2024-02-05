@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import mammoth from 'mammoth';
 import ChatGptComponent from './ChatGptComponent';
 import Nofile from './Component/Nofile';
-import  {UploadOutlined ,FileTextOutlined} from '@ant-design/icons';
-
+import  {UploadOutlined } from '@ant-design/icons';
+import { Fieldset } from 'primereact/fieldset';
 const DocumentReader = () => {
   const [documentText, setDocumentText] = useState('');
-  const [fileName, setFileName] = useState('No file chosen');
+  const [fileName, setFileName] = useState(null);
   
   const handleFileChange = async (event) => {
     const file = event.target.files[0];
@@ -29,16 +29,21 @@ const DocumentReader = () => {
 
   return (
     <div>
-    <div className='pads'>
+   
     <div className='file-input-container'>
-
-      <input type="file" id="fileInput" onChange={handleFileChange} />
-      <label htmlFor="fileInput" className="custom-file-input">Choose File <UploadOutlined /> </label>
-      <span className="file-label"><FileTextOutlined/> {fileName} </span>
+        <div className='pads'>
+          <input type="file" id="fileInput" onChange={handleFileChange} />
+          <label htmlFor="fileInput" className="custom-file-input">Choose File <UploadOutlined /> </label>
+        </div>
+      {fileName && <Fieldset unstyled  collapsed legend={fileName} toggleable>
+      <p className='text' dangerouslySetInnerHTML={{ __html: documentText }} />
+      </Fieldset>}
       </div>
-    </div>
     
-      <div className='text' dangerouslySetInnerHTML={{ __html: documentText }} />
+    
+    
+
+
       {!documentText && <Nofile/>}
       {documentText && <ChatGptComponent text={documentText} />}
     </div>

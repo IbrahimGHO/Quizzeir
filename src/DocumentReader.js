@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import mammoth from 'mammoth';
 import ChatGptComponent from './ChatGptComponent';
+import Header from './Component/Header';
 import Nofile from './Component/Nofile';
-import  {UploadOutlined } from '@ant-design/icons';
+
 import { Fieldset } from 'primereact/fieldset';
 const DocumentReader = () => {
   const [documentText, setDocumentText] = useState('');
@@ -29,16 +30,20 @@ const DocumentReader = () => {
 
   return (
     <div>
-   
+      <Header handleFileChange={handleFileChange} />
     <div className='file-input-container'>
-        <div className='pads'>
+
+        {/* <div className='pads'>
           <input type="file" id="fileInput" onChange={handleFileChange} />
           <label htmlFor="fileInput" className="custom-file-input">Choose File <UploadOutlined /> </label>
-        </div>
+        </div> */}
+
+
+
       {fileName && <Fieldset unstyled  collapsed legend={fileName} toggleable>
       <p className='text' dangerouslySetInnerHTML={{ __html: documentText }} />
       </Fieldset>}
-      </div>
+    </div>
     
     
     

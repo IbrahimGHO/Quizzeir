@@ -26,6 +26,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+
 .text{
   padding: 5px;
   margin: 5px;
@@ -51,18 +53,7 @@
   margin-right: 20%;
   border-radius: 15px;
 }
-.custom-file-input {
-  display: inline-block;
-  padding: 15px ;
-  padding-top: 15px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background-color: var(--primary-color);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+
 .file-label {
   font-size: 15px;
   margin-left: 10px;
@@ -87,11 +78,28 @@ input[type="file"] {
 }
 
 .app-header {
-  background-color:var(--primary-color) ;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: #f2f2f2;
   display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically in the center */
   text-align: center;
-  padding: 20px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+.custom-file-input {
+  display: inline-block;
+  padding: 5px 15px; /* Adjusted padding for a more balanced look */
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--primary-color);
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .app-title {

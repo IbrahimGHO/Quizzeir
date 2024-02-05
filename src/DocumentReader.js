@@ -33,11 +33,6 @@ const DocumentReader = () => {
       <Header handleFileChange={handleFileChange} />
     <div className='file-input-container'>
 
-        {/* <div className='pads'>
-          <input type="file" id="fileInput" onChange={handleFileChange} />
-          <label htmlFor="fileInput" className="custom-file-input">Choose File <UploadOutlined /> </label>
-        </div> */}
-
 
 
       {fileName && <Fieldset unstyled  collapsed legend={fileName} toggleable>

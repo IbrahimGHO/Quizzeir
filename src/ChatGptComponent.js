@@ -28,7 +28,10 @@ const ChatGptComponent = ({ text }) => {
 
   return ( 
     <div>
+    <div>
+
       <Button className='big-button' label="Generate Questions & Answers" severity='Primary' onClick={handleGptCall}/>
+    </div>
       {loading && <ProgressSpinner style={{margin:'20px' , width: '100px', height: '100px' }}/>} {/* Show loading indicator while loading */}
       {gptResponse && (
         <div>
